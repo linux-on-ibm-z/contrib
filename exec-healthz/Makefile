@@ -38,6 +38,9 @@ endif
 ifeq ($(ARCH),ppc64le)
 	BASEIMAGE?=ppc64le/busybox
 endif
+ifeq ($(ARCH),s390x)
+    BASEIMAGE?=s390x/busybox
+endif
 
 server: exechealthz.go
 	CGO_ENABLED=0 GOOS=linux GOARCH=$(ARCH) GOARM=6 go build -a -installsuffix cgo -ldflags '-w' -o exechealthz ./exechealthz.go
