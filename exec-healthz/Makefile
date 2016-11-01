@@ -22,7 +22,7 @@ all: container
 # TAG doesn't default to anything. You must set it via make params
 PREFIX?=gcr.io/google_containers/exechealthz
 ARCH?=amd64
-GOLANG_VERSION=1.6
+GOLANG_VERSION=1.7
 TEMP_DIR:=$(shell mktemp -d)
 
 # Set default base image dynamically for each arch
