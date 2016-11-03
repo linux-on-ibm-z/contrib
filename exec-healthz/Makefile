@@ -24,7 +24,7 @@ PREFIX?=gcr.io/google_containers/exechealthz
 ARCH?=amd64
 GOLANG_VERSION=1.7
 TEMP_DIR:=$(shell mktemp -d)
-
+TAG?=1.1
 # Set default base image dynamically for each arch
 ifeq ($(ARCH),amd64)
 	BASEIMAGE?=busybox
